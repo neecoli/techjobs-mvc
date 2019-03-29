@@ -27,5 +27,22 @@
         </div>
     </div>
 
+    <!-- make new fragment for listing all jobs-->
+
+    <div th:fragment="results">
+      <ul>
+        <li th:each="job : ${jobResults}">
+            <!--print jobResults hashmap-->
+          <table class = "job-listing">
+
+            <tr th:each="item : ${job}">
+              <td th:text="${item.key}"></td>
+              <td th:text="${item.value}"></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+
 </body>
 </html>

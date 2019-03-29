@@ -37,6 +37,13 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <!--Put each job in its own table, with one job field per row.
+    Add the CSS class "job-listing" to each of the tables to get some nice styling
+    -Insert fragment link here
+    -->
+
+    <h3 th:if="${jobResults}" th:text="${jobResults.size() +  ' Result(s)'}"></h3>
+    <div th:replace="fragments :: results"></div>
 
 </div>
 

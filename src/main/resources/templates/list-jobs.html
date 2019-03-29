@@ -11,7 +11,11 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #3 - Use the same list display from search.html -->
-
+    <!-- display full job listings, just like the search results page
+    -reuse the code written in search.html by defining a new fragment in that file,
+    then include the fragment in list.jobs.html.
+    -->
+    <p th:replace="fragments :: results"></p>
 </div>
 
 </body>
